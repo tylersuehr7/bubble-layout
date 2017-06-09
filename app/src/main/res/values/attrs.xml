@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="font" format="enum">
+        <enum name="regular" value="0"/>
+        <enum name="light" value="1"/>
+        <enum name="medium" value="2"/>
+        <enum name="bold" value="3"/>
+        <enum name="alternate" value="4"/>
+    </attr>
+
+    <attr name="circleColor" format="color"/>
+    <attr name="borderColor" format="color"/>
+    <attr name="borderWidth" format="dimension"/>
+
+    <attr name="bubbleSize" format="dimension"/>
+    <attr name="bubbleOffset" format="integer"/>
+    <attr name="bubblePeek" format="integer"/>
+    <attr name="bubbleMargin" format="dimension"/>
+    <attr name="useBubbleOffset" format="boolean"/>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="circleColor"/>
+        <attr name="borderColor"/>
+        <attr name="borderWidth"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleCountView">
+        <attr name="android:textColor"/>
+        <attr name="android:text"/>
+        <attr name="circleColor"/>
+        <attr name="borderColor"/>
+        <attr name="borderWidth"/>
+        <attr name="font"/>
+    </declare-styleable>
+
+    <declare-styleable name="BubbleLayout">
+        <attr name="borderColor"/>
+        <attr name="borderWidth"/>
+        <attr name="bubbleSize"/>
+        <attr name="bubblePeek"/>
+        <attr name="bubbleOffset"/>
+        <attr name="bubbleMargin"/>
+        <attr name="useBubbleOffset"/>
+    </declare-styleable>
+</resources>
