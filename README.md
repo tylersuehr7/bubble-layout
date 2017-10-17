@@ -94,7 +94,7 @@ Method | Summary
 ## Using Bubbles
 Bubbles are the core feature of this library, but what are they? Bubbles are a circular shape that either shows an avatar image or displays an extra count (like, "+3").
 
-`BubbleLayout` manages all the bubbles, and their views, for you! `BubbleLayout` affords you the ability to add, remove, or clear bubbles in it, and will handle displaying the extra count bubble when the set peek is reached.
+`BubbleLayout` manages all of the bubbles, and their views, for you! It affords you the ability to add, remove, or clear bubbles in it, and will handle displaying the extra count bubble when the set peek is reached.
 
 ### Adding a bubble
 Adding a bubble can be done by using any of the overloads of `addBubble(...)` in `BubbleLayout`. Simple examples are shown here:
