@@ -4,7 +4,10 @@ import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.ColorInt;
+import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
+import android.support.annotation.Px;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
@@ -188,6 +191,55 @@ public class BubbleLayout extends ViewGroup {
         this.excess = 0;
         removeAllViews();
     }
+
+    public void setUseBubbleOffset(boolean useOffset) {
+        this.useOffset = useOffset;
+        invalidate();
+    }
+
+    public void setBubbleSize(int bubbleSize) {
+        this.bubbleSize = bubbleSize;
+        invalidate();
+    }
+
+    public void setBubblePeek(int bubblePeek) {
+        this.bubblePeek = bubblePeek;
+        invalidate();
+    }
+
+    public void setBubbleOffset(int bubbleOffset) {
+        this.bubbleOffset = bubbleOffset;
+        invalidate();
+    }
+
+    public void setBubbleMargin(int bubbleMargin) {
+        this.bubbleMargin = bubbleMargin;
+        invalidate();
+    }
+
+    public void setBubbleBorderWidth(@Px int width) {
+        this.bubbleBorderWidth = width;
+        invalidate();
+    }
+
+    public void setBubbleBorderColor(@ColorInt int color) {
+        this.bubbleBorderColor = color;
+        invalidate();
+    }
+
+    public void setBubbleBorderColorResource(@ColorRes int res) {
+        setBubbleBorderColor(ContextCompat.getColor(getContext(), res));
+    }
+
+    public void setBubbleTextColor(@ColorInt int color) {
+        this.textColor = color;
+        invalidate();
+    }
+
+    public void setBubbleTextColorResource(@ColorRes int res) {
+        setBubbleTextColor(ContextCompat.getColor(getContext(), res));
+    }
+
 
     /**
      * Creates an instance of {@link CircleCountView} with the defined properties.
