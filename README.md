@@ -1,4 +1,5 @@
 # Bubble Layout
+*Documentation and library updates still in progress*
 An Android library that contains a bubble layout... similar to the chat bubbles on Facebook Messenger.
 
 <img src="https://github.com/tylersuehr7/bubble-layout/blob/master/docs/screen_bubbles_1.png" width="200"> <img src="https://github.com/tylersuehr7/bubble-layout/blob/master/docs/screen_bubbles_2.png" width="200">
