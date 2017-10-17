@@ -3,7 +3,9 @@ import android.support.annotation.DrawableRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import com.tylersuehr.bubblesexample.widgets.BubbleLayout;
+
+import com.tylersuehr.bubbles.BubbleLayout;
+
 import java.util.Random;
 /**
  * Copyright 2017 Tyler Suehr
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Let's dynamically test our BubbleLayout!
-        this.bubbleLayout = (BubbleLayout)findViewById(R.id.bubble_example_4);
+        this.bubbleLayout = (BubbleLayout) findViewById(R.id.bubble_example_4);
     }
 
     public void onClick(View v) {

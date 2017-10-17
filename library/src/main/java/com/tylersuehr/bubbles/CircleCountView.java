@@ -1,4 +1,4 @@
-package com.tylersuehr.bubblesexample.widgets;
+package com.tylersuehr.bubbles;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -9,23 +9,24 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.View;
-import com.tylersuehr.bubblesexample.R;
+
 /**
- * Copyright 2017 Tyler Suehr
- * Created by tyler on 6/9/2017.
+ * Copyright © 2017 Tyler Suehr
  *
- * <b>Summary</b>
  * This view will draw a circle with a border around it and then draw text in the center. This
  * is intended to be used as an 'extra' count for when a ViewGroup or something has too many
  * views, but still needs to display a count or extra data.
  *
- * <b>Important</b>
+ * Immutable Properties:
+ * {@link #circleRadius} stores the radius based on the needed size.
+ * {@link #viewSize} stores the smallest size of the view's dimensions.
+ *
+ * Important note:
  * {@link #onMeasure(int, int)} dynamically measures our text size, so we do NOT need to set
  * a text size in the constructor or by using accessors.
  *
- * <b>Immutable Properties</b>
- * {@link #circleRadius} stores the radius based on the needed size.
- * {@link #viewSize} stores the smallest size of the view's dimensions.
+ * @author Tyler Suehr
+ * @version 1.0
  */
 public class CircleCountView extends View {
     private final Paint circlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -56,11 +57,10 @@ public class CircleCountView extends View {
 
         // Set XML attributes
         TypedArray a = c.obtainStyledAttributes(attrs, R.styleable.CircleCountView);
-        this.backColor = a.getColor(R.styleable.CircleCountView_circleColor, ContextCompat.getColor(c, R.color.grey_600)); // Grey 600
-        this.borderColor = a.getColor(R.styleable.CircleCountView_borderColor, ContextCompat.getColor(c, R.color.colorPrimary)); // Primary color
         this.borderWidth = a.getDimensionPixelSize(R.styleable.CircleCountView_borderWidth, (int)(1f * dm.density)); // 1dp
-        this.textColor = a.getColor(R.styleable.CircleCountView_android_textColor, ContextCompat.getColor(c, R.color.grey_50)); // Grey 50
-        this.typeface =  FontCache.create(c, a.getInt(R.styleable.CircleCountView_font, 2)); // Default MEDIUM
+        this.borderColor = a.getColor(R.styleable.CircleCountView_borderColor, ContextCompat.getColor(c, R.color.default_circle_border_color));
+        this.backColor = a.getColor(R.styleable.CircleCountView_circleColor, ContextCompat.getColor(c, R.color.default_circle_back_color));
+        this.textColor = a.getColor(R.styleable.CircleCountView_android_textColor, ContextCompat.getColor(c, R.color.default_circle_text_color));
         this.text = a.hasValue(R.styleable.CircleCountView_android_text) ? "+" + a.getString(R.styleable.CircleCountView_android_text) : "";
         a.recycle();
 

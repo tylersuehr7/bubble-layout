@@ -1,10 +1,12 @@
-package com.tylersuehr.bubblesexample.widgets;
+package com.tylersuehr.bubbles;
 import java.util.Enumeration;
 import java.util.Hashtable;
+
 /**
  * Copyright 2017 Tyler Suehr
  * Created by tyler on 6/9/2017.
  */
+@Deprecated
 abstract class ObjectPool<T> {
     private long expirationTime;
     private Hashtable<T, Long> locked;

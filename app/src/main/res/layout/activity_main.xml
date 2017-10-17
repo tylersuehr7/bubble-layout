@@ -19,7 +19,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
-        <com.tylersuehr.bubblesexample.widgets.CircleImageView
+        <com.tylersuehr.bubbles.CircleImageView
             android:id="@+id/c_0"
             android:layout_width="56dp"
             android:layout_height="56dp"
@@ -27,7 +27,7 @@
             android:src="@drawable/img_profile_0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/header_circle_image_view"/>
-        <com.tylersuehr.bubblesexample.widgets.CircleImageView
+        <com.tylersuehr.bubbles.CircleImageView
             android:id="@+id/c_1"
             android:layout_width="56dp"
             android:layout_height="56dp"
@@ -37,7 +37,7 @@
             android:src="@drawable/img_profile_1"
             app:layout_constraintTop_toBottomOf="@+id/header_circle_image_view"
             app:layout_constraintLeft_toRightOf="@+id/c_0"/>
-        <com.tylersuehr.bubblesexample.widgets.CircleImageView
+        <com.tylersuehr.bubbles.CircleImageView
             android:id="@+id/c_2"
             android:layout_width="56dp"
             android:layout_height="56dp"
@@ -47,7 +47,7 @@
             android:src="@drawable/img_profile_2"
             app:layout_constraintTop_toBottomOf="@+id/header_circle_image_view"
             app:layout_constraintLeft_toRightOf="@+id/c_1"/>
-        <com.tylersuehr.bubblesexample.widgets.CircleImageView
+        <com.tylersuehr.bubbles.CircleImageView
             android:id="@+id/c_3"
             android:layout_width="56dp"
             android:layout_height="56dp"
@@ -69,34 +69,48 @@
             app:layout_constraintTop_toBottomOf="@+id/c_2"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
-        <com.tylersuehr.bubblesexample.widgets.CircleCountView
+        <com.tylersuehr.bubbles.CircleCountView
             android:id="@+id/cc_0"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginTop="16dp"
+            android:textColor="@color/colorPrimary"
             android:text="4"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/header_circle_count_view"
             tools:layout_editor_absoluteX="16dp"/>
-        <com.tylersuehr.bubblesexample.widgets.CircleCountView
+        <com.tylersuehr.bubbles.CircleCountView
             android:id="@+id/cc_1"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
+            android:textColor="@color/colorPrimary"
             android:text="8"
             app:layout_constraintLeft_toRightOf="@+id/cc_0"
             app:layout_constraintTop_toBottomOf="@+id/header_circle_count_view"/>
-        <com.tylersuehr.bubblesexample.widgets.CircleCountView
+        <com.tylersuehr.bubbles.CircleCountView
             android:id="@+id/cc_2"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
+            android:textColor="@color/colorPrimary"
             android:text="16"
             app:layout_constraintLeft_toRightOf="@+id/cc_1"
+            app:layout_constraintTop_toBottomOf="@+id/header_circle_count_view"/>
+        <com.tylersuehr.bubbles.CircleCountView
+            android:id="@+id/cc_3"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/colorPrimary"
+            android:text="102"
+            app:layout_constraintLeft_toRightOf="@+id/cc_2"
             app:layout_constraintTop_toBottomOf="@+id/header_circle_count_view"/>
 
         <TextView
@@ -110,7 +124,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cc_2"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
-        <com.tylersuehr.bubblesexample.widgets.BubbleLayout
+        <com.tylersuehr.bubbles.BubbleLayout
             android:id="@+id/bubble_example_0"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -119,27 +133,28 @@
             app:layout_constraintTop_toBottomOf="@+id/header_bubble_0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_4"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_5"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_6"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_7"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleCountView
+            <com.tylersuehr.bubbles.CircleCountView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/colorPrimary"
                 android:text="3"/>
-        </com.tylersuehr.bubblesexample.widgets.BubbleLayout>
+        </com.tylersuehr.bubbles.BubbleLayout>
 
         <TextView
             android:id="@+id/header_bubble_1"
@@ -152,7 +167,7 @@
             app:layout_constraintTop_toBottomOf="@+id/bubble_example_0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
-        <com.tylersuehr.bubblesexample.widgets.BubbleLayout
+        <com.tylersuehr.bubbles.BubbleLayout
             android:id="@+id/bubble_example_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -162,19 +177,20 @@
             app:layout_constraintTop_toBottomOf="@+id/header_bubble_1"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_6"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_8"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleCountView
+            <com.tylersuehr.bubbles.CircleCountView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/colorPrimary"
                 android:text="6"/>
-        </com.tylersuehr.bubblesexample.widgets.BubbleLayout>
+        </com.tylersuehr.bubbles.BubbleLayout>
 
         <TextView
             android:id="@+id/header_bubble_2"
@@ -187,7 +203,7 @@
             app:layout_constraintTop_toBottomOf="@+id/bubble_example_1"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
-        <com.tylersuehr.bubblesexample.widgets.BubbleLayout
+        <com.tylersuehr.bubbles.BubbleLayout
             android:id="@+id/bubble_example_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -199,23 +215,24 @@
             app:layout_constraintTop_toBottomOf="@+id/header_bubble_2"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_0"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_3"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_5"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleCountView
+            <com.tylersuehr.bubbles.CircleCountView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/colorPrimary"
                 android:text="2"/>
-        </com.tylersuehr.bubblesexample.widgets.BubbleLayout>
+        </com.tylersuehr.bubbles.BubbleLayout>
 
         <TextView
             android:id="@+id/header_bubble_3"
@@ -228,7 +245,7 @@
             app:layout_constraintTop_toBottomOf="@+id/bubble_example_2"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
-        <com.tylersuehr.bubblesexample.widgets.BubbleLayout
+        <com.tylersuehr.bubbles.BubbleLayout
             android:id="@+id/bubble_example_3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -239,27 +256,28 @@
             app:layout_constraintTop_toBottomOf="@+id/header_bubble_3"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_0"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_3"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_5"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleImageView
+            <com.tylersuehr.bubbles.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_profile_6"/>
-            <com.tylersuehr.bubblesexample.widgets.CircleCountView
+            <com.tylersuehr.bubbles.CircleCountView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/colorPrimary"
                 android:text="1"/>
-        </com.tylersuehr.bubblesexample.widgets.BubbleLayout>
+        </com.tylersuehr.bubbles.BubbleLayout>
 
         <TextView
             android:id="@+id/header_bubble_4"
@@ -272,7 +290,7 @@
             app:layout_constraintTop_toBottomOf="@+id/bubble_example_3"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
-        <com.tylersuehr.bubblesexample.widgets.BubbleLayout
+        <com.tylersuehr.bubbles.BubbleLayout
             android:id="@+id/bubble_example_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

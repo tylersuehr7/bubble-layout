@@ -1,4 +1,4 @@
-package com.tylersuehr.bubblesexample.widgets;
+package com.tylersuehr.bubbles;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -13,21 +13,24 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import com.tylersuehr.bubblesexample.R;
+import android.view.View;
+
 /**
- * Copyright 2017 Tyler Suehr
- * Created by tyler on 4/28/2017.
+ * Copyright © 2017 Tyler Suehr
  *
- * This is an implementation of {@link AppCompatImageView} that will calculate a circle at the
- * center of its measured size to do the following:
+ * Subclass of {@link AppCompatImageView} that will calculate a circle at the center of its
+ * measured size to do the following:
  *      1. Draw a border circle with the given width and color.
  *      2. Draw a back circle with the given color.
  *      3. Crop the Drawable into Bitmap with the proper dimensions
  *      4. Draw the Bitmap in the center of the circle (leaving enough space for the border)
  *
- * <b>Immutable Properties</b>
+ * Immutable Properties:
  * {@link #circleRadius} stores the radius based on the needed size.
  * {@link #viewSize} stores the smallest size of the view's dimensions.
+ *
+ * @author Tyler Suehr
+ * @version 1.0
  */
 public class CircleImageView extends AppCompatImageView {
     private final Paint borderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -54,9 +57,9 @@ public class CircleImageView extends AppCompatImageView {
 
         // Set XML attributes
         TypedArray a = c.obtainStyledAttributes(attrs, R.styleable.CircleImageView);
-        this.backColor = a.getColor(R.styleable.CircleImageView_circleColor, ContextCompat.getColor(c, R.color.grey_600)); // Grey 600
-        this.borderColor = a.getColor(R.styleable.CircleImageView_borderColor, ContextCompat.getColor(c, R.color.colorPrimary)); // Primary color
         this.borderWidth = a.getDimensionPixelSize(R.styleable.CircleImageView_borderWidth, (int)(1f * dm.density)); // 1dp
+        this.borderColor = a.getColor(R.styleable.CircleImageView_borderColor, ContextCompat.getColor(c, R.color.default_circle_border_color));
+        this.backColor = a.getColor(R.styleable.CircleImageView_circleColor, ContextCompat.getColor(c, R.color.default_circle_text_color));
         a.recycle();
 
         // Setup border paint
@@ -64,14 +67,14 @@ public class CircleImageView extends AppCompatImageView {
         this.borderPaint.setColor(borderColor);
 
         // Setup main paint
-        this.mainPaint.setColor(ContextCompat.getColor(c, R.color.grey_50)); // Grey 50
+        this.mainPaint.setColor(ContextCompat.getColor(c, R.color.default_circle_text_color));
         this.mainPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        int width = MeasureSpec.getSize(widthMeasureSpec);
+        int width = View.MeasureSpec.getSize(widthMeasureSpec);
         setMeasuredDimension(width, width);
     }
 

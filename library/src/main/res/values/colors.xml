@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_circle_back_color">#FFFFFF</color>
+    <color name="default_circle_border_color">#757575</color>
+    <color name="default_circle_text_color">#FAFAFA</color>
+</resources>

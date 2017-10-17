@@ -1,4 +1,5 @@
-package com.tylersuehr.bubblesexample.widgets;
+package com.tylersuehr.bubbles;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -9,26 +10,27 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import com.tylersuehr.bubblesexample.R;
+
 /**
  * Copyright 2017 Tyler Suehr
  * Created by tyler on 6/9/2017.
  */
-public class BubbleLayout extends ViewGroup {
+@Deprecated
+public class PoolBubbleLayout extends ViewGroup {
     private final BubbleViewPool bubblePool;
     private final BubbleParams params;
     private int excess = 0;
 
 
-    public BubbleLayout(Context context) {
+    public PoolBubbleLayout(Context context) {
         this(context, null);
     }
 
-    public BubbleLayout(Context context, AttributeSet attrs) {
+    public PoolBubbleLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public BubbleLayout(Context c, AttributeSet attrs, int defStyleAttr) {
+    public PoolBubbleLayout(Context c, AttributeSet attrs, int defStyleAttr) {
         super(c, attrs, defStyleAttr);
         this.params = new BubbleParams(c, attrs);
         this.bubblePool = new BubbleViewPool(c, params);
@@ -198,7 +200,7 @@ public class BubbleLayout extends ViewGroup {
             this.bubbleOffset = bubbleSize / (a.getInt(R.styleable.BubbleLayout_bubbleOffset, DEFAULT_BUBBLE_OFFSET));
             this.bubblePeek = a.getInt(R.styleable.BubbleLayout_bubblePeek, DEFAULT_BUBBLE_PEEK);
             this.bubbleBorderWidth = a.getDimensionPixelSize(R.styleable.BubbleLayout_borderWidth, DEFAULT_BORDER_WIDTH);
-            this.bubbleBorderColor = a.getColor(R.styleable.BubbleLayout_borderColor, ContextCompat.getColor(c, R.color.colorPrimary));
+            this.bubbleBorderColor = a.getColor(R.styleable.BubbleLayout_borderColor, ContextCompat.getColor(c, R.color.default_circle_border_color));
             this.bubbleMargin = a.getDimensionPixelSize(R.styleable.BubbleLayout_bubbleMargin, DEFAULT_BUBBLE_MARGIN);
             this.useOffset = a.getBoolean(R.styleable.BubbleLayout_useBubbleOffset, true);
             a.recycle();
