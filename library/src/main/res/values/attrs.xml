@@ -25,6 +25,7 @@
     </declare-styleable>
 
     <declare-styleable name="BubbleLayout">
+        <attr name="android:textColor"/>
         <attr name="borderColor"/>
         <attr name="borderWidth"/>
         <attr name="bubbleSize"/>

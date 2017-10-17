@@ -29,6 +29,8 @@ public class BubbleLayout extends ViewGroup {
     private int bubbleBorderWidth;
     /* Space in between each bubble (only used when no offsets) */
     private int bubbleMargin;
+    /* Color of text (used by count view) */
+    private int textColor;
     /* Whether or not to offset each bubble */
     private boolean useOffset;
     /* Stores count of excess bubbles (used when peek exceeded) */
@@ -60,8 +62,9 @@ public class BubbleLayout extends ViewGroup {
         this.bubbleOffset = bubbleSize / (a.getInt(R.styleable.BubbleLayout_bubbleOffset, DEFAULT_BUBBLE_OFFSET));
         this.bubblePeek = a.getInt(R.styleable.BubbleLayout_bubblePeek, DEFAULT_BUBBLE_PEEK);
         this.bubbleBorderWidth = a.getDimensionPixelSize(R.styleable.BubbleLayout_borderWidth, DEFAULT_BORDER_WIDTH);
-        this.bubbleBorderColor = a.getColor(R.styleable.BubbleLayout_borderColor, ContextCompat.getColor(c, R.color.default_circle_border_color));
         this.bubbleMargin = a.getDimensionPixelSize(R.styleable.BubbleLayout_bubbleMargin, DEFAULT_BUBBLE_MARGIN);
+        this.bubbleBorderColor = a.getColor(R.styleable.BubbleLayout_borderColor, ContextCompat.getColor(c, R.color.default_circle_border_color));
+        this.textColor = a.getColor(R.styleable.BubbleLayout_android_textColor, ContextCompat.getColor(c, R.color.default_circle_text_color));
         this.useOffset = a.getBoolean(R.styleable.BubbleLayout_useBubbleOffset, true);
         a.recycle();
     }
@@ -191,6 +194,7 @@ public class BubbleLayout extends ViewGroup {
         count.setLayoutParams(new LayoutParams(bubbleSize, bubbleSize));
         count.setBorderColor(bubbleBorderColor);
         count.setBorderWidth(bubbleBorderWidth);
+        count.setTextColor(textColor);
         return count;
     }
 
