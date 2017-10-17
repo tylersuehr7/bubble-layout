@@ -189,6 +189,10 @@ public class BubbleLayout extends ViewGroup {
         removeAllViews();
     }
 
+    /**
+     * Creates an instance of {@link CircleCountView} with the defined properties.
+     * @return {@link CircleCountView}
+     */
     private CircleCountView createThemedCount() {
         CircleCountView count = new CircleCountView(getContext());
         count.setLayoutParams(new LayoutParams(bubbleSize, bubbleSize));
@@ -198,6 +202,11 @@ public class BubbleLayout extends ViewGroup {
         return count;
     }
 
+    /**
+     * Creates an instance of {@link CircleImageView} with the defined properties.
+     * @param dr {@link Drawable}
+     * @return {@link CircleImageView}
+     */
     private CircleImageView createThemedImage(Drawable dr) {
         CircleImageView image = new CircleImageView(getContext());
         image.setLayoutParams(new LayoutParams(bubbleSize, bubbleSize));
