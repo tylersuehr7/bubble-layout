@@ -61,3 +61,32 @@ Attribute | Type | Summary
 `app:bubbleOffset` | `int` | The offset overlap of each bubble on each other.
 `app:bubbleMargin` | `dimension` | The spacing in between each bubble.
 `app:useBubbleOffset` | `boolean` | True if bubbles should overlap and use offset.
+
+### Using in Java code
+`BubbleLayout` can be programmatically added into any ViewGroup. Simple usage in an Activity is shown here:
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    
+    BubbleLayout bubbles = new BubbleLayout(this);
+    // Set any properties for bubble layout
+    
+    setContentView(bubbles);
+}
+```
+
+Here is a table of all the accessible attributes available for this view:
+
+Method | Summary
+--- | ---
+`setUseBubbleOffset(boolean)` | True if bubbles should overlap each other and use offsets rather than margins.
+`setBubbleSize(int)` | Sets the size of each bubble.
+`setBubblePeek(int)` | Sets how many avatar bubbles should be shown before showing the extra count.
+`setBubbleOffset(int)` | Sets the overlapping offset of each bubble (only used when useOffset is true).
+`setBubbleMargin(int)` | Sets the spacing between each bubble (only used when useOffset is false).
+`setBubbleBorderWidth(int)` | Sets the border width of each bubble.
+`setBubbleBorderColor(int)` | Sets the border color of each bubble.
+`setBubbleBorderColorResource(int)` | Sets the border color of each bubble using color resource.
+`setBubbleTextColor(int)` | Sets the text color of each bubble (used by count bubble).
+`setBubbleTextColorResource(int)` | Sets the text color of each bubble using color resource (used by count bubble).
