@@ -1,4 +1,4 @@
-package com.tylersuehr.bubblelayout;
+package com.tylersuehr.bubbles;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.tylersuehr.bubblelayout", appContext.getPackageName());
+        assertEquals("com.tylersuehr.bubbles.test", appContext.getPackageName());
     }
 }

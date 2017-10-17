@@ -1,4 +1,4 @@
-package com.tylersuehr.bubblelayout.widgets;
+package com.tylersuehr.bubblesexample.widgets;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;

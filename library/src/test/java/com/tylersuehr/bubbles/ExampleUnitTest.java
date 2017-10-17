@@ -1,4 +1,4 @@
-package com.tylersuehr.bubblelayout;
+package com.tylersuehr.bubbles;
 
 import org.junit.Test;
 

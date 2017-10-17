@@ -1,4 +1,4 @@
-package com.tylersuehr.bubblelayout.widgets;
+package com.tylersuehr.bubblesexample.widgets;
 import java.util.Enumeration;
 import java.util.Hashtable;
 /**

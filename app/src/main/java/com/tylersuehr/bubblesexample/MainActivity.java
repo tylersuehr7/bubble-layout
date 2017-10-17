@@ -1,9 +1,9 @@
-package com.tylersuehr.bubblelayout;
+package com.tylersuehr.bubblesexample;
 import android.support.annotation.DrawableRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import com.tylersuehr.bubblelayout.widgets.BubbleLayout;
+import com.tylersuehr.bubblesexample.widgets.BubbleLayout;
 import java.util.Random;
 /**
  * Copyright 2017 Tyler Suehr

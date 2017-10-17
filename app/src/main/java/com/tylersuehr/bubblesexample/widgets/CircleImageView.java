@@ -1,4 +1,4 @@
-package com.tylersuehr.bubblelayout.widgets;
+package com.tylersuehr.bubblesexample.widgets;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -13,7 +13,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import com.tylersuehr.bubblelayout.R;
+import com.tylersuehr.bubblesexample.R;
 /**
  * Copyright 2017 Tyler Suehr
  * Created by tyler on 4/28/2017.
