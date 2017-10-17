@@ -90,3 +90,46 @@ Method | Summary
 `setBubbleBorderColorResource(int)` | Sets the border color of each bubble using color resource.
 `setBubbleTextColor(int)` | Sets the text color of each bubble (used by count bubble).
 `setBubbleTextColorResource(int)` | Sets the text color of each bubble using color resource (used by count bubble).
+
+## Using Bubbles
+Bubbles are the core feature of this library, but what are they? Bubbles are a circular shape that either shows an avatar image or displays an extra count (like, "+3").
+
+`BubbleLayout` manages all of the bubbles, and their views, for you! It affords you the ability to add, remove, or clear bubbles in it, and will handle displaying the extra count bubble when the set peek is reached.
+
+### Adding a bubble
+Adding a bubble can be done by using any of the overloads of `addBubble(...)` in `BubbleLayout`. Simple examples are shown here:
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    
+    BubbleLayout bubbles = new BubbleLayout(this);
+    setContentView(bubbles);
+    
+    // Example of adding a bubble using a drawable
+    bubbles.addBubble(anyCoolDrawable);
+    
+    // Example of adding another bubble using a bitmap
+    bubbles.addBubble(anyCoolBitmap);
+    
+    // Example of adding another bubble using a drawable resource
+    bubbles.addBubble(R.drawable.cool_image);
+}
+```
+
+### Removing all bubbles
+Removing all bubbles can be done by using the `clearBubbles()` method in `BubbleLayout`. A simple example is shown here:
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    
+    BubbleLayout bubbles = new BubbleLayout(this);
+    setContentView(bubbles);
+    
+    addCoolBubblesToBubbleLayout();
+    
+    // Example of removing all shown bubbles
+    bubbles.clearBubbles();
+}
+```
