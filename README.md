@@ -3,6 +3,22 @@ A customizable Android ViewGroup that displays avatar bubbles... similar to the 
 
 <img src="https://github.com/tylersuehr7/bubble-layout/blob/master/docs/screen_bubbles_1.png" width="200"> <img src="https://github.com/tylersuehr7/bubble-layout/blob/master/docs/screen_bubbles_2.png" width="200">
 
+How to use it...
+
+In your project level build.gradle :
+
+allprojects {
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
+    }
+} 
+In your app level build.gradle:
+
+dependencies {
+    compile 'com.github.tylersuehr7:bubble-layout:1.0'
+}  
+
 ## Using the Bubble Layout
 The intended purpose of this library is to afford a ViewGroup that displays avatar bubbles that can have a limit on how many can be shown on the screen at once before displaying an extra count.
 
